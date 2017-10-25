@@ -1,5 +1,5 @@
 //
-//  ChatViewController.swift
+//  ChatController.swift
 //  THPTMath
 //
 //  Created by HungLe on 10/25/17.
@@ -8,21 +8,18 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatController: ViewController {
 
-    @IBOutlet weak var btn_menu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        btn_menu.target = revealViewController();
-        btn_menu.action = #selector(SWRevealViewController.revealToggle(_:));
+        
+        setupNavigationBar();
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

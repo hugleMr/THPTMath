@@ -13,10 +13,12 @@
 		0A94BC811FA03F70008FD343 /* THPTMath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A94BC7F1FA03F70008FD343 /* THPTMath.xcdatamodeld */; };
 		0A94BC831FA03F70008FD343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A94BC821FA03F70008FD343 /* Assets.xcassets */; };
 		0A94BC861FA03F70008FD343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A94BC841FA03F70008FD343 /* LaunchScreen.storyboard */; };
-		0A94BC931FA083B4008FD343 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A94BC911FA083B4008FD343 /* SWRevealViewController.m */; };
-		0A94BC951FA08E1E008FD343 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94BC941FA08E1E008FD343 /* MenuViewController.swift */; };
-		0A94BC971FA08E52008FD343 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94BC961FA08E52008FD343 /* MenuTableViewCell.swift */; };
-		0A9E11AC1FA0987400854B99 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E11AB1FA0987400854B99 /* ChatViewController.swift */; };
+		0AECEE8F1FA114C700287B81 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECEE881FA114C700287B81 /* MenuTableViewCell.swift */; };
+		0AECEE901FA114C700287B81 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECEE8A1FA114C700287B81 /* ChatController.swift */; };
+		0AECEE911FA114C700287B81 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AECEE8D1FA114C700287B81 /* SWRevealViewController.m */; };
+		0AECEE921FA114C700287B81 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECEE8E1FA114C700287B81 /* MenuViewController.swift */; };
+		0AECEE941FA1158800287B81 /* ViewController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECEE931FA1158800287B81 /* ViewController+navbar.swift */; };
+		0AECEE961FA116C700287B81 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECEE951FA116C700287B81 /* SettingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +30,14 @@
 		0A94BC821FA03F70008FD343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A94BC851FA03F70008FD343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A94BC871FA03F70008FD343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A94BC901FA083B3008FD343 /* THPTMath-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THPTMath-Bridging-Header.h"; sourceTree = "<group>"; };
-		0A94BC911FA083B4008FD343 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		0A94BC921FA083B4008FD343 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		0A94BC941FA08E1E008FD343 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		0A94BC961FA08E52008FD343 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		0A9E11AB1FA0987400854B99 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0AECEE881FA114C700287B81 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		0AECEE8A1FA114C700287B81 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		0AECEE8B1FA114C700287B81 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		0AECEE8C1FA114C700287B81 /* THPTMath-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "THPTMath-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AECEE8D1FA114C700287B81 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		0AECEE8E1FA114C700287B81 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0AECEE931FA1158800287B81 /* ViewController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+navbar.swift"; sourceTree = "<group>"; };
+		0AECEE951FA116C700287B81 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,21 +70,47 @@
 		0A94BC771FA03F70008FD343 /* THPTMath */ = {
 			isa = PBXGroup;
 			children = (
-				0A94BC921FA083B4008FD343 /* SWRevealViewController.h */,
-				0A94BC911FA083B4008FD343 /* SWRevealViewController.m */,
+				0AECEE891FA114C700287B81 /* Controller */,
+				0AECEE861FA114C700287B81 /* Model */,
+				0AECEE871FA114C700287B81 /* View */,
 				0A94BC781FA03F70008FD343 /* AppDelegate.swift */,
-				0A94BC7A1FA03F70008FD343 /* ViewController.swift */,
+				0AECEE8C1FA114C700287B81 /* THPTMath-Bridging-Header.h */,
 				0A94BC7C1FA03F70008FD343 /* Main.storyboard */,
 				0A94BC821FA03F70008FD343 /* Assets.xcassets */,
-				0A94BC941FA08E1E008FD343 /* MenuViewController.swift */,
-				0A94BC961FA08E52008FD343 /* MenuTableViewCell.swift */,
 				0A94BC841FA03F70008FD343 /* LaunchScreen.storyboard */,
 				0A94BC871FA03F70008FD343 /* Info.plist */,
 				0A94BC7F1FA03F70008FD343 /* THPTMath.xcdatamodeld */,
-				0A94BC901FA083B3008FD343 /* THPTMath-Bridging-Header.h */,
-				0A9E11AB1FA0987400854B99 /* ChatViewController.swift */,
 			);
 			path = THPTMath;
+			sourceTree = "<group>";
+		};
+		0AECEE861FA114C700287B81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AECEE871FA114C700287B81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AECEE881FA114C700287B81 /* MenuTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AECEE891FA114C700287B81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AECEE8B1FA114C700287B81 /* SWRevealViewController.h */,
+				0AECEE8D1FA114C700287B81 /* SWRevealViewController.m */,
+				0A94BC7A1FA03F70008FD343 /* ViewController.swift */,
+				0AECEE931FA1158800287B81 /* ViewController+navbar.swift */,
+				0AECEE8E1FA114C700287B81 /* MenuViewController.swift */,
+				0AECEE951FA116C700287B81 /* SettingController.swift */,
+				0AECEE8A1FA114C700287B81 /* ChatController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,12 +187,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A94BC7B1FA03F70008FD343 /* ViewController.swift in Sources */,
-				0A94BC951FA08E1E008FD343 /* MenuViewController.swift in Sources */,
-				0A94BC971FA08E52008FD343 /* MenuTableViewCell.swift in Sources */,
-				0A9E11AC1FA0987400854B99 /* ChatViewController.swift in Sources */,
 				0A94BC791FA03F70008FD343 /* AppDelegate.swift in Sources */,
+				0AECEE941FA1158800287B81 /* ViewController+navbar.swift in Sources */,
+				0AECEE8F1FA114C700287B81 /* MenuTableViewCell.swift in Sources */,
+				0AECEE921FA114C700287B81 /* MenuViewController.swift in Sources */,
+				0AECEE961FA116C700287B81 /* SettingController.swift in Sources */,
+				0AECEE901FA114C700287B81 /* ChatController.swift in Sources */,
 				0A94BC811FA03F70008FD343 /* THPTMath.xcdatamodeld in Sources */,
-				0A94BC931FA083B4008FD343 /* SWRevealViewController.m in Sources */,
+				0AECEE911FA114C700287B81 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

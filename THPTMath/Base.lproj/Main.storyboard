@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YHl-bG-9FG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="155" width="320" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableViewCell" rowHeight="57" id="eBt-XH-s8X" customClass="MenuTableViewCell" customModule="THPTMath" customModuleProvider="target">
@@ -88,25 +88,37 @@
                                     <outlet property="delegate" destination="00S-3V-Ry2" id="uNg-W6-a9X"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="7jN-Yq-lxM">
+                                <rect key="frame" x="10" y="25" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="UHw-OJ-eQ5"/>
+                                    <constraint firstAttribute="height" constant="128" id="p4I-Sh-XOp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YHl-bG-9FG" firstAttribute="trailing" secondItem="q26-Fk-d40" secondAttribute="trailing" id="2mJ-7l-6kM"/>
+                            <constraint firstItem="7jN-Yq-lxM" firstAttribute="top" secondItem="q26-Fk-d40" secondAttribute="top" constant="5" id="5V3-YI-QBG"/>
                             <constraint firstItem="YHl-bG-9FG" firstAttribute="bottom" secondItem="q26-Fk-d40" secondAttribute="bottom" id="Xpc-Hx-5vP"/>
-                            <constraint firstItem="YHl-bG-9FG" firstAttribute="top" secondItem="HSt-6d-Wnb" secondAttribute="top" id="jkb-YV-O4E"/>
+                            <constraint firstItem="7jN-Yq-lxM" firstAttribute="leading" secondItem="q26-Fk-d40" secondAttribute="leading" constant="10" id="e7S-Rt-Vax"/>
                             <constraint firstItem="YHl-bG-9FG" firstAttribute="leading" secondItem="q26-Fk-d40" secondAttribute="leading" id="o1v-ia-s6y"/>
+                            <constraint firstItem="YHl-bG-9FG" firstAttribute="top" secondItem="7jN-Yq-lxM" secondAttribute="bottom" constant="2" id="pWO-zr-ek3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q26-Fk-d40"/>
                     </view>
+                    <connections>
+                        <outlet property="avatar" destination="7jN-Yq-lxM" id="wYe-Mn-eId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rY6-UN-ubx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1008.75" y="-1007.7464788732394"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting Controller-->
         <scene sceneID="7Zc-Fs-stT">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PZP-6T-tuZ" customClass="ViewController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PZP-6T-tuZ" customClass="SettingController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HRf-er-8Yb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,27 +134,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="RJ6-eM-l5s"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PBt-Qn-4Ib">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="btn_menu" id="iM9-DC-2wh"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="bar_menu" destination="iM9-DC-2wh" id="4Bg-6p-3li"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="PBt-Qn-4Ib"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15q-RM-Nn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1824.375" y="-321.12676056338029"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat Controller-->
         <scene sceneID="QIM-jC-uBY">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w24-Qt-wc7" customClass="ChatViewController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w24-Qt-wc7" customClass="ChatController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CpY-Nk-hLy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjX-jg-V9Z">
-                                <rect key="frame" x="44" y="156" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjX-jg-V9Z">
+                                <rect key="frame" x="32" y="106" width="121" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -152,16 +159,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ky2-TZ-itV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="q4u-gw-l9o">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="btn_menu" id="238-iD-kqV"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="btn_menu" destination="238-iD-kqV" id="LLd-zo-ePl"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="q4u-gw-l9o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YT-vw-thL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="-321"/>
+            <point key="canvasLocation" x="2585.625" y="-321.12676056338029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zI4-kr-gEh">
@@ -183,6 +185,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_menu" width="25" height="25"/>
+        <image name="avatar" width="167" height="167"/>
     </resources>
 </document>
