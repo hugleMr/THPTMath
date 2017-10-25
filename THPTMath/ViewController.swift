@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bar_menu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        bar_menu.target = revealViewController();
+        bar_menu.action = #selector(SWRevealViewController.revealToggle(_:));
     }
 
     override func didReceiveMemoryWarning() {
