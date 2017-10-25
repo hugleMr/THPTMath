@@ -16,7 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //UIApplication.shared.statusBarStyle = .lightContent
+        
+        /*let statusBarView = UIView(frame: CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIApplication.shared.statusBarFrame.height))
+        let blurEffect = UIBlurEffect(style: .light) // Set any style you want(.light or .dark) to achieve different effect.
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = statusBarView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        statusBarView.addSubview(blurEffectView)
+        window?.rootViewController?.view.addSubview(statusBarView);*/
+        
         return true
     }
 
