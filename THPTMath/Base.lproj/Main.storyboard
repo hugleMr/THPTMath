@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -115,15 +115,15 @@
             </objects>
             <point key="canvasLocation" x="1008.75" y="-1007.7464788732394"/>
         </scene>
-        <!--Setting Controller-->
+        <!--Home Controller-->
         <scene sceneID="7Zc-Fs-stT">
             <objects>
-                <viewController storyboardIdentifier="SettingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PZP-6T-tuZ" customClass="SettingController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PZP-6T-tuZ" customClass="HomeController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HRf-er-8Yb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXI-ta-iKk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXI-ta-iKk">
                                 <rect key="frame" x="23" y="104" width="96" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -163,7 +163,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YT-vw-thL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2585.625" y="-321.12676056338029"/>
+            <point key="canvasLocation" x="2458" y="-320"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="Bin-73-j2B">
+            <objects>
+                <viewController storyboardIdentifier="SettingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H4S-yO-JaE" customClass="SettingController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v1p-ek-NQI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2S-Kr-Rco">
+                                <rect key="frame" x="31" y="100" width="151" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="DKk-br-3SG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iRL-L5-uLs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2po-6q-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3097.5" y="-321.12676056338029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zI4-kr-gEh">
@@ -185,6 +210,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="167" height="167"/>
+        <image name="avatar" width="128" height="128"/>
     </resources>
 </document>
