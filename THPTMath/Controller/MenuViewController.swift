@@ -18,10 +18,10 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menu_names = ["Home","Setting","Chat","Email","Lock"];
+        menu_names = ["Đề thi","Chuyên đề","Kiểm tra","Đăng xuất"];
         image_icons = [UIImage(named: "icon_home")!,UIImage(named: "icon_setting")!,
                        UIImage(named: "icon_chat")!,
-                       UIImage(named: "icon_email")!,UIImage(named: "icon_lock")!];
+                       UIImage(named: "icon_email")!];
         
         avatar.layer.borderColor = UIColor.black.cgColor;
         avatar.layer.borderWidth = 2;
@@ -72,26 +72,29 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let cell:MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell;
         
-        if (cell.name_icon.text! == "Home"){
+        if (cell.name_icon.text! == "Đề thi"){
             let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
-            let desc = main_story.instantiateViewController(withIdentifier: "HomeController") as! HomeController;
+            let desc = main_story.instantiateViewController(withIdentifier: "ExamController") as! ExamController;
             
             let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
             reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
         }
-        if (cell.name_icon.text! == "Setting"){
+        if (cell.name_icon.text! == "Chuyên đề"){
             let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
-            let desc = main_story.instantiateViewController(withIdentifier: "SettingController") as! SettingController;
+            let desc = main_story.instantiateViewController(withIdentifier: "ThemeExamController") as! ThemeExamController;
             
             let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
             reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
         }
-        if (cell.name_icon.text! == "Chat"){
+        if (cell.name_icon.text! == "Kiểm tra"){
             let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
-            let desc = main_story.instantiateViewController(withIdentifier: "ChatController") as! ChatController;
+            let desc = main_story.instantiateViewController(withIdentifier: "ContestController") as! ContestController;
             
             let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
             reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
+        }
+        if (cell.name_icon.text! == "Đăng xuất"){
+            
         }
     }
 
