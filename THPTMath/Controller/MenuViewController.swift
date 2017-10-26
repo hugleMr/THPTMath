@@ -18,9 +18,10 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menu_names = ["Setting","Chat","Email","Lock"];
-        image_icons = [UIImage(named: "btn_caidat")!,UIImage(named: "btn_chat")!,
-                       UIImage(named: "btn_email")!,UIImage(named: "btn_khoa")!];
+        menu_names = ["Home","Setting","Chat","Email","Lock"];
+        image_icons = [UIImage(named: "icon_home")!,UIImage(named: "icon_setting")!,
+                       UIImage(named: "icon_chat")!,
+                       UIImage(named: "icon_email")!,UIImage(named: "icon_lock")!];
         
         avatar.layer.borderColor = UIColor.black.cgColor;
         avatar.layer.borderWidth = 2;
@@ -71,6 +72,13 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let cell:MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell;
         
+        if (cell.name_icon.text! == "Home"){
+            let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
+            let desc = main_story.instantiateViewController(withIdentifier: "HomeController") as! HomeController;
+            
+            let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
+            reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
+        }
         if (cell.name_icon.text! == "Setting"){
             let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
             let desc = main_story.instantiateViewController(withIdentifier: "SettingController") as! SettingController;
