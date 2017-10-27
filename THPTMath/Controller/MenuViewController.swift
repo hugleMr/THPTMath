@@ -9,7 +9,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MenuViewController: ViewController,UITableViewDelegate,UITableViewDataSource {
     
     var menu_names:Array = [String]();
     var image_icons = [UIImage]();
@@ -18,10 +18,12 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menu_names = ["Đề thi","Chuyên đề","Kiểm tra","Đăng xuất"];
-        image_icons = [UIImage(named: "icon_home")!,UIImage(named: "icon_setting")!,
-                       UIImage(named: "icon_chat")!,
-                       UIImage(named: "icon_email")!];
+        menu_names = ["Đề thi","Chuyên đề","Kiểm tra","Lịch sử","Đăng xuất"];
+        image_icons = [UIImage(named: "ic_exam")!,
+                       UIImage(named: "ic_category")!,
+                       UIImage(named: "ic_contest")!,
+                       UIImage(named: "ic_history")!,
+                       UIImage(named: "ic_logout")!];
         
         avatar.layer.borderColor = UIColor.black.cgColor;
         avatar.layer.borderWidth = 2;
@@ -81,7 +83,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         if (cell.name_icon.text! == "Chuyên đề"){
             let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
-            let desc = main_story.instantiateViewController(withIdentifier: "ThemeExamController") as! ThemeExamController;
+            let desc = main_story.instantiateViewController(withIdentifier: "CategoryController") as! CategoryController;
             
             let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
             reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
@@ -93,8 +95,15 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
             reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
         }
-        if (cell.name_icon.text! == "Đăng xuất"){
+        if (cell.name_icon.text! == "Lịch sử"){
+            let main_story:UIStoryboard = UIStoryboard(name : "Main", bundle : nil);
+            let desc = main_story.instantiateViewController(withIdentifier: "HistoryController") as! HistoryController;
             
+            let new_front_viewcontroller = UINavigationController.init(rootViewController: desc);
+            reavelView.pushFrontViewController(new_front_viewcontroller, animated: true);
+        }
+        if (cell.name_icon.text! == "Đăng xuất"){
+            self.showToast(message: "Éo cho đăng xuất đấy :|");
         }
     }
 
