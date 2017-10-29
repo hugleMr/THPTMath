@@ -25,7 +25,6 @@ class ExamController: ViewController,UITableViewDelegate,UITableViewDataSource {
         
         setupNavigationBar();
         setTitleNavigationBar(title: "BỘ ĐỀ");
-        //content/get-category.php
         getDataFromJson(url: "content/get-test.php", completion: { response in
             
             /*if let data = response.result.value{
@@ -53,10 +52,9 @@ class ExamController: ViewController,UITableViewDelegate,UITableViewDataSource {
             }
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TO DO
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

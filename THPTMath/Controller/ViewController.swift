@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var container_loading: UIView = UIView()
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    let headers: [String: String] = [
+        "X-Math-Api-Key": "manh123@abc"
+    ]
+    let domain: String = "http://mathpt.webstarterz.com/api/"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
