@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 extension ViewController {
     
@@ -44,6 +45,12 @@ extension ViewController {
         Alamofire.request(myUrl,method: .post,parameters : parameters, encoding: URLEncoding(),
                           headers : self.headers).responseJSON { response in
             
+            completion(response)
+        }
+    }
+    
+    func getRequestImage(url: String, completion: @escaping (_ success: DataResponse<Image>) -> Void) {
+        Alamofire.request(url).responseImage { response in
             completion(response)
         }
     }

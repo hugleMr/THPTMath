@@ -9,6 +9,7 @@
 
 import UIKit
 import SwiftyJSON
+import FBSDKLoginKit
 
 class MenuViewController: ViewController,UITableViewDelegate,UITableViewDataSource,
 UITextFieldDelegate{
@@ -16,6 +17,8 @@ UITextFieldDelegate{
     var menu_names:Array = [String]();
     
     var image_icons = [UIImage]();
+    
+    var dict : [String : AnyObject]!
     
     var distance_keyboard: CGFloat = 0.0;
     var duration: Double = 0.0;
@@ -72,7 +75,7 @@ UITextFieldDelegate{
             editbox_user_login.text! = username!;
             editbox_password_login.text! = password!;
             
-            login(username: username!,password: password!);
+            //login(username: username!,password: password!);
         }
         
         let notificationCenter = NotificationCenter.default
@@ -157,6 +160,65 @@ UITextFieldDelegate{
             })
         }
     }
+    
+    func loginFb(){
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                if fbloginresult.grantedPermissions != nil {
+                    if(fbloginresult.grantedPermissions.contains("email"))
+                    {
+                        self.getFBUserData()
+                        fbLoginManager.logOut()
+                    }
+                }
+            }
+        }
+    }
+    
+    func getFBUserData(){
+        if((FBSDKAccessToken.current()) != nil){
+            FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "picture.width(128).height(128),id,name,email"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    let swiftyJsonVar = JSON(result as! [String : AnyObject])
+                    
+                    if let name: String = swiftyJsonVar["name"].object as? String {
+                        self.lblName.text! = name;
+                    }
+                    if let email: String = swiftyJsonVar["email"].object as? String {
+                        self.lblEmail.text! = email;
+                    }
+                    
+                    let dict = result as! NSDictionary
+                    if let picture = dict.object(forKey: "picture") as? NSDictionary{
+                        if let data = picture.object(forKey: "data") as? NSDictionary {
+                            if let url = data.object(forKey: "url") as? String {
+                                self.getRequestImage(url: url, completion: { response in
+                                    if let image = response.result.value {
+                                        self.avatar.image = image;
+                                    }
+                                })
+                            }
+                        }
+                    }
+                    
+                    self.btn_signin.isHidden = true;
+                    self.view.endEditing(true)
+                    self.closePopup();
+                    
+                }else{
+                    print("error as Any")
+                    print(error as Any)
+                }
+            })
+        }
+    }
+    
+    @IBAction func loginfacebook(_ sender: UIButton) {
+        loginFb();
+    }
+    
     
     func login(username: String,password: String){
         let parameters: [String: Any] = [
