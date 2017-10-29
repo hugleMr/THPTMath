@@ -1,3 +1,9 @@
+FBSDKLoginKit.framework
+FBSDKShareKit.framework
+FBSDKCoreKit.framework
+SwiftyJSON.framework
+Alamofire.framework
+Pods/
 Pods/Pods.xcodeproj/xcuserdata/
 THPTMath.xcodeproj/xcuserdata/hungle.xcuserdatad/xcschemes/xcschememanagement.plist
 THPTMath.xcworkspace/
