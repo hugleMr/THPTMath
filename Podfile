@@ -8,6 +8,10 @@ target 'THPTMath' do
   # Pods for THPTMath
 
   	pod 'Alamofire'
+    pod 'AlamofireImage'
     pod 'SwiftyJSON'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+    pod 'FBSDKLoginKit'
 
 end
