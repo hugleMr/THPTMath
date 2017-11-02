@@ -183,14 +183,12 @@
             if (_select > 0)
                 document.getElementById('answer_' + _select).style.backgroundColor = '#e74c3c';
             document.getElementById('answer_' + _true).style.backgroundColor = '#2ecc71';
-
         }
-        
     }
 
     function callNativeApp (index) {
     try {
-        webkit.messageHandlers.callbackHandler.postMessage(": " + index);
+        webkit.messageHandlers.callbackHandler.postMessage(index);
     } catch(err) {
         console.log('The native context does not exist yet');
     }
