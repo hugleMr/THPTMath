@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A181A021FA628B80081AFC0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A011FA628B80081AFC0 /* FBSDKCoreKit.framework */; };
-		0A181A031FA628B80081AFC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A011FA628B80081AFC0 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0A181A051FA628F80081AFC0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A041FA628F70081AFC0 /* FBSDKLoginKit.framework */; };
-		0A181A061FA628F80081AFC0 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A041FA628F70081AFC0 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0A181A081FA6290A0081AFC0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A071FA6290A0081AFC0 /* FBSDKShareKit.framework */; };
-		0A181A091FA6290A0081AFC0 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A071FA6290A0081AFC0 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A181A121FA65BC40081AFC0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A111FA65BC40081AFC0 /* FBSDKShareKit.framework */; };
+		0A181A131FA65BC40081AFC0 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A111FA65BC40081AFC0 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A181A151FA65BD20081AFC0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A141FA65BD20081AFC0 /* FBSDKLoginKit.framework */; };
+		0A181A161FA65BD20081AFC0 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A141FA65BD20081AFC0 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A181A181FA65BE30081AFC0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */; };
+		0A181A191FA65BE30081AFC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A1F1B881FAA26A2008EAD13 /* mathjax in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F1B871FAA26A2008EAD13 /* mathjax */; };
+		0A1F1B8A1FAA312E008EAD13 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F1B891FAA312E008EAD13 /* test.html */; };
 		0A29D1401FA3872400A1E882 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29D13F1FA3872400A1E882 /* Alamofire.framework */; };
 		0A29D1411FA3872400A1E882 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29D13F1FA3872400A1E882 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A29D1431FA3873100A1E882 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29D1421FA3873100A1E882 /* SwiftyJSON.framework */; };
@@ -46,11 +48,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0A181A191FA65BE30081AFC0 /* FBSDKCoreKit.framework in Embed Frameworks */,
 				0A29D1441FA3873100A1E882 /* SwiftyJSON.framework in Embed Frameworks */,
-				0A181A031FA628B80081AFC0 /* FBSDKCoreKit.framework in Embed Frameworks */,
-				0A181A091FA6290A0081AFC0 /* FBSDKShareKit.framework in Embed Frameworks */,
-				0A181A061FA628F80081AFC0 /* FBSDKLoginKit.framework in Embed Frameworks */,
 				0A29D1411FA3872400A1E882 /* Alamofire.framework in Embed Frameworks */,
+				0A181A161FA65BD20081AFC0 /* FBSDKLoginKit.framework in Embed Frameworks */,
+				0A181A131FA65BC40081AFC0 /* FBSDKShareKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,10 +61,12 @@
 
 /* Begin PBXFileReference section */
 		056E0663E75E3C5331BD8AE3 /* Pods-THPTMath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THPTMath.release.xcconfig"; path = "Pods/Target Support Files/Pods-THPTMath/Pods-THPTMath.release.xcconfig"; sourceTree = "<group>"; };
-		0A181A011FA628B80081AFC0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		0A181A041FA628F70081AFC0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		0A181A071FA6290A0081AFC0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		0A181A0A1FA63F300081AFC0 /* THPTMath.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = THPTMath.entitlements; sourceTree = "<group>"; };
+		0A181A111FA65BC40081AFC0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		0A181A141FA65BD20081AFC0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		0A1F1B871FAA26A2008EAD13 /* mathjax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mathjax; sourceTree = "<group>"; };
+		0A1F1B891FAA312E008EAD13 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		0A29D13F1FA3872400A1E882 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		0A29D1421FA3873100A1E882 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		0A29D1491FA4348F00A1E882 /* MButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MButton.swift; sourceTree = "<group>"; };
@@ -97,10 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A181A121FA65BC40081AFC0 /* FBSDKShareKit.framework in Frameworks */,
+				0A181A181FA65BE30081AFC0 /* FBSDKCoreKit.framework in Frameworks */,
 				533F7C96A19C5F9FA4B8E405 /* Pods_THPTMath.framework in Frameworks */,
-				0A181A021FA628B80081AFC0 /* FBSDKCoreKit.framework in Frameworks */,
-				0A181A081FA6290A0081AFC0 /* FBSDKShareKit.framework in Frameworks */,
-				0A181A051FA628F80081AFC0 /* FBSDKLoginKit.framework in Frameworks */,
+				0A181A151FA65BD20081AFC0 /* FBSDKLoginKit.framework in Frameworks */,
 				0A29D1401FA3872400A1E882 /* Alamofire.framework in Frameworks */,
 				0A29D1431FA3873100A1E882 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -122,13 +126,14 @@
 		0A94BC6C1FA03F70008FD343 = {
 			isa = PBXGroup;
 			children = (
-				0A181A071FA6290A0081AFC0 /* FBSDKShareKit.framework */,
-				0A181A041FA628F70081AFC0 /* FBSDKLoginKit.framework */,
-				0A181A011FA628B80081AFC0 /* FBSDKCoreKit.framework */,
+				0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */,
+				0A181A141FA65BD20081AFC0 /* FBSDKLoginKit.framework */,
+				0A181A111FA65BC40081AFC0 /* FBSDKShareKit.framework */,
 				0A29D1421FA3873100A1E882 /* SwiftyJSON.framework */,
 				0A29D13F1FA3872400A1E882 /* Alamofire.framework */,
 				0A94BC771FA03F70008FD343 /* THPTMath */,
 				0A94BC761FA03F70008FD343 /* Products */,
+				0A1F1B871FAA26A2008EAD13 /* mathjax */,
 				BC19132E8788F554F4986482 /* Pods */,
 				3CF89AC819088287FF8FA481 /* Frameworks */,
 			);
@@ -154,6 +159,7 @@
 				0A94BC7C1FA03F70008FD343 /* Main.storyboard */,
 				0A94BC821FA03F70008FD343 /* Assets.xcassets */,
 				0A94BC841FA03F70008FD343 /* LaunchScreen.storyboard */,
+				0A1F1B891FAA312E008EAD13 /* test.html */,
 				0A94BC871FA03F70008FD343 /* Info.plist */,
 				0AECEE8C1FA114C700287B81 /* THPTMath-Bridging-Header.h */,
 				0A94BC7F1FA03F70008FD343 /* THPTMath.xcdatamodeld */,
@@ -280,8 +286,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1F1B881FAA26A2008EAD13 /* mathjax in Resources */,
 				0A94BC861FA03F70008FD343 /* LaunchScreen.storyboard in Resources */,
 				0A94BC831FA03F70008FD343 /* Assets.xcassets in Resources */,
+				0A1F1B8A1FAA312E008EAD13 /* test.html in Resources */,
 				0A94BC7E1FA03F70008FD343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
