@@ -11,6 +11,11 @@ import UIKit
 import SwiftyJSON
 import FBSDKLoginKit
 
+enum LoginType : Int{
+    case login_normal = 1
+    case login_fb = 2
+}
+
 class MenuViewController: ViewController,UITableViewDelegate,UITableViewDataSource,
 UITextFieldDelegate{
     
@@ -113,8 +118,8 @@ UITextFieldDelegate{
          "password": String password
          "fullname": String fullname
          "email": String email
-
          */
+        
         if(self.editbox_user_register.text?.isEmpty ?? true ||
             self.editbox_password_register.text?.isEmpty ?? true ||
             self.editbox_fullname.text?.isEmpty ?? true ||
@@ -202,6 +207,8 @@ UITextFieldDelegate{
                             }
                         }
                     }
+                    
+                    //UserDefaults.standard.set(LoginType.login_normal, forKey: "login_type")
                     
                     self.btn_signin.isHidden = true;
                     self.view.endEditing(true)
@@ -338,6 +345,16 @@ UITextFieldDelegate{
     }
     
     //====== TextField
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
+        
+        /*if !string.canBeConverted(to: String.Encoding.ascii)
+        {
+            return false
+        }*/
+        
+        return true
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if(textField == editbox_user_login){
