@@ -15,9 +15,6 @@ extension ViewController {
     func setupNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0.18, green: 0.59, blue: 0.88, alpha: 1);
         
-        /*let leftBarButton = UIButton(type: .system);
-         leftBarButton.setImage(#imageLiteral(resourceName: "btn_menu").withRenderingMode(.alwaysOriginal), for: .normal);
-         leftBarButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34);*/
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "btn_menu")?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItemStyle.done, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
     }
     
@@ -28,13 +25,16 @@ extension ViewController {
         
     }
     
-    func getDataFromJson(url: String,completion: @escaping (_ success: DataResponse<Any>) -> Void) {
+    func getDataFromJson(url: String,parameters:Parameters?, completion: @escaping (_ success: DataResponse<Any>) -> Void) {
         
         let myUrl: String = domain + url;
         
-        Alamofire.request(myUrl,method: .get, encoding: JSONEncoding.default,
+        //self.showLoading(uiView: self.view);
+        
+        Alamofire.request(myUrl,method: .get,parameters: parameters, encoding: JSONEncoding.default,
                           headers : self.headers).responseJSON { response in
             
+            //self.hideLoading(uiView: self.view);
             completion(response)
         }
     }
@@ -42,9 +42,11 @@ extension ViewController {
     func postDataWithParam(url: String,parameters:Parameters, completion: @escaping (_ success: DataResponse<Any>) -> Void){
         let myUrl: String = domain + url;
         
+        //self.showLoading(uiView: self.view);
+        
         Alamofire.request(myUrl,method: .post,parameters : parameters, encoding: URLEncoding(),
                           headers : self.headers).responseJSON { response in
-            
+            //self.hideLoading(uiView: self.view);
             completion(response)
         }
     }
@@ -105,9 +107,9 @@ extension ViewController {
         container_loading.backgroundColor = UIColorFromHex(rgbValue: 0xffffff, alpha: 0.3)
         
         let loadingView: UIView = UIView()
-        loadingView.frame = CGRect(x: 0,y: 0,width: 80,height: 80)
+        loadingView.frame = CGRect(x: 0,y: 0,width: 70,height: 70)
         loadingView.center = uiView.center
-        loadingView.backgroundColor = UIColorFromHex(rgbValue: 0x444444, alpha: 0.7)
+        loadingView.backgroundColor = UIColorFromHex(rgbValue: 0x444444, alpha: 0.5)
         loadingView.clipsToBounds = true
         loadingView.layer.cornerRadius = 10
         

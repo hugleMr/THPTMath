@@ -1,3 +1,4 @@
+THPTMath.xcodeproj/project.xcworkspace/xcuserdata/
 FBSDKLoginKit.framework
 FBSDKShareKit.framework
 FBSDKCoreKit.framework
@@ -5,8 +6,6 @@ SwiftyJSON.framework
 Alamofire.framework
 Pods/
 Pods/Pods.xcodeproj/xcuserdata/
-THPTMath.xcodeproj/xcuserdata/hungle.xcuserdatad/xcschemes/xcschememanagement.plist
 THPTMath.xcworkspace/
 THPTMath.xcodeproj/xcuserdata/
-THPTMath.xcodeproj/project.xcworkspace/xcuserdata/
 *.DS_Store

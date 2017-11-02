@@ -25,7 +25,17 @@ class ExamController: ViewController,UITableViewDelegate,UITableViewDataSource {
         
         setupNavigationBar();
         setTitleNavigationBar(title: "BỘ ĐỀ");
-        getDataFromJson(url: "content/get-test.php", completion: { response in
+        
+        self.showLoading(uiView: self.view);
+        
+        /*let parameters: [String: Any] = [
+            "type": "1",
+            "cateID": "1"
+        ]*/
+        
+        getDataFromJson(url: "content/get-test.php", parameters: nil, completion: { response in
+            
+            self.hideLoading(uiView: self.view);
             
             /*if let data = response.result.value{
                 let swiftyJsonVar = JSON(data)
@@ -51,6 +61,7 @@ class ExamController: ViewController,UITableViewDelegate,UITableViewDataSource {
                 }
             }
         })
+        
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -32,7 +32,7 @@ class CategoryController: ViewController,UITableViewDelegate,UITableViewDataSour
          "countQuestion" : "54"
          */
         
-        getDataFromJson(url: "content/get-category.php", completion: { response in
+        getDataFromJson(url: "content/get-category.php",parameters: nil, completion: { response in
             
             /*if let data = response.result.value{
                 let swiftyJsonVar = JSON(data)
