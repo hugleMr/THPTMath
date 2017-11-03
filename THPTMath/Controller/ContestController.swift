@@ -38,7 +38,7 @@ class ContestController: ViewController,WKUIDelegate,WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage)
     {
         if(message.name == "callbackHandler") {
-            print("JavaScript is sending a message \(message.body)")
+            self.showToast(message: "JavaScript is sending a message \(message.body)")
         }
     }
 
