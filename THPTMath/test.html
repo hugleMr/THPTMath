@@ -190,7 +190,7 @@
 
     function callNativeApp (index) {
     try {
-        webkit.messageHandlers.callbackHandler.postMessage(": " + index);
+        webkit.messageHandlers.callbackHandler.postMessage(index);
     } catch(err) {
         console.log('The native context does not exist yet');
     }
