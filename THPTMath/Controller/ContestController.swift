@@ -8,42 +8,101 @@
 
 import UIKit
 import SwiftyJSON
-import WebKit
+import Alamofire
 
-class ContestController: ViewController,WKUIDelegate,WKScriptMessageHandler {
+class ContestController: ViewController{
 
-    var webView: WKWebView?
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var contestHeaderView: ContestHeaderView!
+    var data_questions:Array = [String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationBar();
+        setTitleNavigationBar(title: "KIỂM TRA");
+        
+        containerView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        
+        self.showLoading(uiView: self.view);
+        
+        let parameters: [String: Any] = [
+            "cateIDs": "1",
+            "page": "50"
+        ]
+        
+        getDataFromJsonWithNoneEncode(url: "content/exam.php", parameters: parameters, completion: { response in
+            
+            self.hideLoading(uiView: self.view);
+            
+            if(response.result.value != nil) {
+                let swiftyJsonVar = JSON(response.result.value!)
+                
+                var data = [[String:Any]]()
+                
+                if let resData = swiftyJsonVar["data"].arrayObject {
+                    data = resData as! [[String:AnyObject]]
+                }
+                
+                var index: Int = 0
+                for myData in data {
+                    
+                    let mathUtils = MathUtils()
+                    
+                    index += 1
+                    if let question: String = myData["question"] as? String {
+                        mathUtils.question = "<b>" + "Câu hỏi" + " " +
+                            "\(index)" + "</b>: " + mathUtils.replaceMath(string: question)
+                    }
+                    
+                    if let answerA: String = myData["answerA"] as? String {
+                        mathUtils.answer1 = mathUtils.replaceMath(string: answerA)
+                    }
+                    
+                    if let answerB: String = myData["answerB"] as? String {
+                        mathUtils.answer2 = mathUtils.replaceMath(string: answerB)
+                    }
+                    
+                    if let answerC: String = myData["answerC"] as? String {
+                        mathUtils.answer3 = mathUtils.replaceMath(string: answerC)
+                    }
+                    
+                    if let answerD: String = myData["answerD"] as? String {
+                        mathUtils.answer4 = mathUtils.replaceMath(string: answerD)
+                    }
+                    
+                    if let image: String = myData["image"] as? String {
+                        mathUtils.image = image;
+                    }
+                    
+                    self.data_questions.append(mathUtils.htmlContain());
+                }
+                
+                if(self.data_questions.count > 0){
+                    DispatchQueue.global().async(execute: {
+                        DispatchQueue.main.sync{
+                            self.performSegue(withIdentifier: "ShowContestPageViewController", sender: self)
+                        }
+                    })
+                }
+            }
+        })
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false;
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowContestPageViewController" && self.data_questions.count > 0) {
+            if let contestPageVC = segue.destination as? ContestPageViewController {
+                contestPageVC.jsStrings = self.data_questions
+                contestPageVC.contestPageViewController = contestHeaderView
+            }
+        }
     }
     
     override func loadView() {
         super.loadView()
-        
-        let contentController = WKUserContentController();
-        contentController.add(self,name: "callbackHandler")
-        
-        let config = WKWebViewConfiguration()
-        config.userContentController = contentController
-        
-        webView = WKWebView(frame: CGRect.zero, configuration: config)
-        webView?.uiDelegate = self
-        view = webView
-        _ = webView?.load(URLRequest(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "html")!)))
-    }
-    
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage)
-    {
-        if(message.name == "callbackHandler") {
-            self.showToast(message: "JavaScript is sending a message \(message.body)")
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

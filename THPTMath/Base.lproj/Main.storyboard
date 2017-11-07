@@ -596,20 +596,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kiểm tra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2S-Kr-Rco">
-                                <rect key="frame" x="31" y="100" width="151" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zjv-vz-wjM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPw-2h-fW5">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="568"/>
+                                        <connections>
+                                            <segue destination="sNM-GK-Obk" kind="embed" identifier="ShowContestPageViewController" id="cHp-6R-8K9"/>
+                                        </connections>
+                                    </containerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DET-H5-QUR" customClass="ContestHeaderView" customModule="THPTMath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-35" width="320" height="20"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="JAm-W9-Xdp">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                                <color key="pageIndicatorTintColor" red="0.55303221120000001" green="1" blue="0.96778736340000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="pageControl:" destination="W4p-0l-i2H" eventType="valueChanged" id="Ej3-r8-viE"/>
+                                                </connections>
+                                            </pageControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JAm-W9-Xdp" firstAttribute="leading" secondItem="DET-H5-QUR" secondAttribute="leading" id="399-z4-Fwe"/>
+                                            <constraint firstItem="JAm-W9-Xdp" firstAttribute="top" secondItem="DET-H5-QUR" secondAttribute="top" id="AtA-8I-52d"/>
+                                            <constraint firstAttribute="height" constant="20" id="IaU-Te-bBf"/>
+                                            <constraint firstAttribute="bottom" secondItem="JAm-W9-Xdp" secondAttribute="bottom" id="shp-NU-WaX"/>
+                                            <constraint firstAttribute="trailing" secondItem="JAm-W9-Xdp" secondAttribute="trailing" id="w2X-z7-aG0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="pageControl" destination="JAm-W9-Xdp" id="anX-ZH-hdy"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DET-H5-QUR" secondAttribute="bottom" constant="15" id="0Us-8m-BU3"/>
+                                    <constraint firstAttribute="trailing" secondItem="DET-H5-QUR" secondAttribute="trailing" id="H0N-3u-KJp"/>
+                                    <constraint firstAttribute="bottom" secondItem="XPw-2h-fW5" secondAttribute="bottom" id="LkW-zg-ayK"/>
+                                    <constraint firstAttribute="trailing" secondItem="XPw-2h-fW5" secondAttribute="trailing" constant="8" id="Q7z-7B-8EI"/>
+                                    <constraint firstItem="DET-H5-QUR" firstAttribute="leading" secondItem="Zjv-vz-wjM" secondAttribute="leading" id="WwS-7I-N6F"/>
+                                    <constraint firstItem="XPw-2h-fW5" firstAttribute="top" secondItem="Zjv-vz-wjM" secondAttribute="top" id="oxh-Qg-Ewj"/>
+                                    <constraint firstItem="XPw-2h-fW5" firstAttribute="leading" secondItem="Zjv-vz-wjM" secondAttribute="leading" constant="8" id="pnh-or-qq4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zjv-vz-wjM" firstAttribute="trailing" secondItem="DKk-br-3SG" secondAttribute="trailing" id="HJL-98-PsK"/>
+                            <constraint firstItem="Zjv-vz-wjM" firstAttribute="bottom" secondItem="DKk-br-3SG" secondAttribute="bottom" id="Rvn-C1-1aD"/>
+                            <constraint firstItem="Zjv-vz-wjM" firstAttribute="leading" secondItem="DKk-br-3SG" secondAttribute="leading" id="x0O-8m-cRz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DKk-br-3SG"/>
                     </view>
                     <navigationItem key="navigationItem" id="iRL-L5-uLs"/>
+                    <connections>
+                        <outlet property="containerView" destination="XPw-2h-fW5" id="yjh-JC-g6q"/>
+                        <outlet property="contestHeaderView" destination="DET-H5-QUR" id="yI2-2Q-LcM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2po-6q-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="W4p-0l-i2H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3097.5" y="-321.12676056338029"/>
         </scene>
@@ -655,6 +702,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCg-Ez-q6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018" y="-320"/>
+        </scene>
+        <!--Contest Page View Controller-->
+        <scene sceneID="8UL-RO-rsi">
+            <objects>
+                <pageViewController storyboardIdentifier="ContestPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="sNM-GK-Obk" customClass="ContestPageViewController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGl-Sw-hO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3128" y="445"/>
+        </scene>
+        <!--Contest Current View Controller-->
+        <scene sceneID="W2M-8B-cNW">
+            <objects>
+                <viewController storyboardIdentifier="ContestCurrentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8cv-Nb-fDF" customClass="ContestCurrentViewController" customModule="THPTMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="7T7-Uw-mhj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkJ-Lf-EDO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZkJ-Lf-EDO" firstAttribute="trailing" secondItem="tlP-FX-CDL" secondAttribute="trailing" id="74c-AX-2P1"/>
+                            <constraint firstItem="ZkJ-Lf-EDO" firstAttribute="leading" secondItem="tlP-FX-CDL" secondAttribute="leading" id="AEr-XG-4ak"/>
+                            <constraint firstItem="ZkJ-Lf-EDO" firstAttribute="bottom" secondItem="tlP-FX-CDL" secondAttribute="bottom" id="kO4-4V-daD"/>
+                            <constraint firstItem="ZkJ-Lf-EDO" firstAttribute="top" secondItem="7T7-Uw-mhj" secondAttribute="top" id="rW7-xF-GNh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tlP-FX-CDL"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="ZkJ-Lf-EDO" id="nEC-Bm-saa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqf-Q2-NAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431.875" y="444.71830985915494"/>
         </scene>
     </scenes>
     <resources>
