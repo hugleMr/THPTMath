@@ -14,7 +14,6 @@
 		0A181A181FA65BE30081AFC0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */; };
 		0A181A191FA65BE30081AFC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A1F1B881FAA26A2008EAD13 /* mathjax in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F1B871FAA26A2008EAD13 /* mathjax */; };
-		0A1F1B8A1FAA312E008EAD13 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F1B891FAA312E008EAD13 /* test.html */; };
 		0A29D1401FA3872400A1E882 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29D13F1FA3872400A1E882 /* Alamofire.framework */; };
 		0A29D1411FA3872400A1E882 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29D13F1FA3872400A1E882 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A29D1431FA3873100A1E882 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29D1421FA3873100A1E882 /* SwiftyJSON.framework */; };
@@ -22,6 +21,11 @@
 		0A29D14A1FA4348F00A1E882 /* MButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29D1491FA4348F00A1E882 /* MButton.swift */; };
 		0A29D1501FA4396600A1E882 /* MView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29D14F1FA4396600A1E882 /* MView.swift */; };
 		0A29D1521FA4AEEE00A1E882 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29D1511FA4AEED00A1E882 /* KeyboardLayoutConstraint.swift */; };
+		0A2A1E4A1FAF19B800225ACB /* ContestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A1E491FAF19B800225ACB /* ContestPageViewController.swift */; };
+		0A2A1E4C1FAF1F9000225ACB /* ContestCurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A1E4B1FAF1F9000225ACB /* ContestCurrentViewController.swift */; };
+		0A2A1E4E1FAF24A100225ACB /* ContestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A1E4D1FAF24A100225ACB /* ContestHeaderView.swift */; };
+		0A2A1E501FAF485000225ACB /* QuestionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A1E4F1FAF485000225ACB /* QuestionObject.swift */; };
+		0A58F7021FADB09C00395BEA /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58F7011FADB09C00395BEA /* MathUtils.swift */; };
 		0A94BC791FA03F70008FD343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94BC781FA03F70008FD343 /* AppDelegate.swift */; };
 		0A94BC7B1FA03F70008FD343 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94BC7A1FA03F70008FD343 /* ViewController.swift */; };
 		0A94BC7E1FA03F70008FD343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A94BC7C1FA03F70008FD343 /* Main.storyboard */; };
@@ -66,12 +70,16 @@
 		0A181A141FA65BD20081AFC0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		0A181A171FA65BE20081AFC0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		0A1F1B871FAA26A2008EAD13 /* mathjax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mathjax; sourceTree = "<group>"; };
-		0A1F1B891FAA312E008EAD13 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		0A29D13F1FA3872400A1E882 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		0A29D1421FA3873100A1E882 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/THPTMath-gfmdsuthxlihebgelwwjymbpwvel/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		0A29D1491FA4348F00A1E882 /* MButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MButton.swift; sourceTree = "<group>"; };
 		0A29D14F1FA4396600A1E882 /* MView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MView.swift; sourceTree = "<group>"; };
 		0A29D1511FA4AEED00A1E882 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		0A2A1E491FAF19B800225ACB /* ContestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestPageViewController.swift; sourceTree = "<group>"; };
+		0A2A1E4B1FAF1F9000225ACB /* ContestCurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestCurrentViewController.swift; sourceTree = "<group>"; };
+		0A2A1E4D1FAF24A100225ACB /* ContestHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestHeaderView.swift; sourceTree = "<group>"; };
+		0A2A1E4F1FAF485000225ACB /* QuestionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionObject.swift; sourceTree = "<group>"; };
+		0A58F7011FADB09C00395BEA /* MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
 		0A94BC751FA03F70008FD343 /* THPTMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THPTMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A94BC781FA03F70008FD343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A94BC7A1FA03F70008FD343 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +167,6 @@
 				0A94BC7C1FA03F70008FD343 /* Main.storyboard */,
 				0A94BC821FA03F70008FD343 /* Assets.xcassets */,
 				0A94BC841FA03F70008FD343 /* LaunchScreen.storyboard */,
-				0A1F1B891FAA312E008EAD13 /* test.html */,
 				0A94BC871FA03F70008FD343 /* Info.plist */,
 				0AECEE8C1FA114C700287B81 /* THPTMath-Bridging-Header.h */,
 				0A94BC7F1FA03F70008FD343 /* THPTMath.xcdatamodeld */,
@@ -170,6 +177,8 @@
 		0AECEE861FA114C700287B81 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A58F7011FADB09C00395BEA /* MathUtils.swift */,
+				0A2A1E4F1FAF485000225ACB /* QuestionObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 				0AECEE881FA114C700287B81 /* MenuTableViewCell.swift */,
 				0A9897D41FA2450800A5598D /* ExamTableViewCell.swift */,
 				0A9897D61FA2508E00A5598D /* CategoryTableViewCell.swift */,
+				0A2A1E4D1FAF24A100225ACB /* ContestHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +206,8 @@
 				0A9897D01FA2409400A5598D /* CategoryController.swift */,
 				0A9897D21FA2415100A5598D /* ContestController.swift */,
 				0A9E11E41FA3022C00854B99 /* HistoryController.swift */,
+				0A2A1E491FAF19B800225ACB /* ContestPageViewController.swift */,
+				0A2A1E4B1FAF1F9000225ACB /* ContestCurrentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,7 +301,6 @@
 				0A1F1B881FAA26A2008EAD13 /* mathjax in Resources */,
 				0A94BC861FA03F70008FD343 /* LaunchScreen.storyboard in Resources */,
 				0A94BC831FA03F70008FD343 /* Assets.xcassets in Resources */,
-				0A1F1B8A1FAA312E008EAD13 /* test.html in Resources */,
 				0A94BC7E1FA03F70008FD343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,10 +381,15 @@
 				0A94BC7B1FA03F70008FD343 /* ViewController.swift in Sources */,
 				0A94BC791FA03F70008FD343 /* AppDelegate.swift in Sources */,
 				0A29D14A1FA4348F00A1E882 /* MButton.swift in Sources */,
+				0A58F7021FADB09C00395BEA /* MathUtils.swift in Sources */,
+				0A2A1E4C1FAF1F9000225ACB /* ContestCurrentViewController.swift in Sources */,
+				0A2A1E501FAF485000225ACB /* QuestionObject.swift in Sources */,
 				0AECEE941FA1158800287B81 /* ViewController+base.swift in Sources */,
 				0AECEE8F1FA114C700287B81 /* MenuTableViewCell.swift in Sources */,
+				0A2A1E4A1FAF19B800225ACB /* ContestPageViewController.swift in Sources */,
 				0AECEE921FA114C700287B81 /* MenuViewController.swift in Sources */,
 				0A9E11E51FA3022C00854B99 /* HistoryController.swift in Sources */,
+				0A2A1E4E1FAF24A100225ACB /* ContestHeaderView.swift in Sources */,
 				0A29D1501FA4396600A1E882 /* MView.swift in Sources */,
 				0A9897D31FA2415100A5598D /* ContestController.swift in Sources */,
 				0A9897D51FA2450800A5598D /* ExamTableViewCell.swift in Sources */,

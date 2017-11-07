@@ -39,7 +39,20 @@ extension ViewController {
         }
     }
     
-    func postDataWithParam(url: String,parameters:Parameters, completion: @escaping (_ success: DataResponse<Any>) -> Void){
+    func getDataFromJsonWithNoneEncode(url: String,parameters:Parameters?, completion: @escaping (_ success: DataResponse<Any>) -> Void) {
+        
+        let myUrl: String = domain + url;
+        
+        //self.showLoading(uiView: self.view);
+        
+        Alamofire.request(myUrl,method: .get,parameters: parameters,headers : self.headers).responseJSON { response in
+                            
+                            //self.hideLoading(uiView: self.view);
+                            completion(response)
+        }
+    }
+    
+    func postDataWithParam(url: String,parameters:Parameters?, completion: @escaping (_ success: DataResponse<Any>) -> Void){
         let myUrl: String = domain + url;
         
         //self.showLoading(uiView: self.view);
